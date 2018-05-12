@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="271.0" style="-fx-background-color: #aeaeae;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ProgressBar fx:id="progressBar" layoutX="6.0" layoutY="322.0" prefHeight="22.0" prefWidth="257.0" progress="0.0" stylesheets="@css/progress.css" />
+      <Button fx:id="generateButton" layoutX="6.0" layoutY="350.0" onAction="#generateImage" prefHeight="32.0" prefWidth="257.0" style="-fx-background-color: #3c87ee; -fx-font-family: Roboto; -fx-font-size: 14px; -fx-text-fill: white;" text="GENERATE" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="colorFileButton" layoutX="210.0" layoutY="192.0" onAction="#colorFile" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: #3c87ee; -fx-font-family: Roboto; -fx-font-size: 14px; -fx-text-fill: white;" text="📁" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="colorFileText" layoutX="6.0" layoutY="192.0" prefHeight="33.0" prefWidth="200.0" style="-fx-background-color: d0e4ff; -fx-padding: 0 0 0 5;" text="Color File..." textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Button fx:id="saveLocationButton" layoutX="210.0" layoutY="232.0" onAction="#outputFolder" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: #3c87ee; -fx-font-family: Roboto; -fx-font-size: 14px; -fx-text-fill: white;" text="📁" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="saveLocationText" layoutX="6.0" layoutY="232.0" prefHeight="33.0" prefWidth="200.0" style="-fx-background-color: d0e4ff; -fx-border-radius: 5px; -fx-padding: 0 0 0 5;" text="Save Location.." textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="210.0" layoutY="147.0" prefHeight="32.0" prefWidth="53.0" style="-fx-alignment: center;" text="OR" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hexColorField" layoutX="6.0" layoutY="110.0" onAction="#colorShow" onKeyPressed="#colorShow" onKeyTyped="#colorShow" prefHeight="32.0" prefWidth="200.0" promptText="Hex Color..." stylesheets="@css/textField.css" />
+      <Label fx:id="progressText" layoutX="6.0" layoutY="322.0" prefHeight="22.0" prefWidth="257.0" style="-fx-alignment: center;" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="35.0" prefHeight="30.0" prefWidth="257.0" style="-fx-alignment: center;" text="Color Generator" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Roboto Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="102.0" layoutY="59.0" prefHeight="30.0" prefWidth="70.0" style="-fx-alignment: center;" text="By Jan Lukas v1.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Roboto Bold" size="9.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="hexColorShow" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="32.0" layoutX="220.0" layoutY="110.0" stroke="WHITE" strokeType="OUTSIDE" width="32.0" />
+      <TextField fx:id="nameColorField" layoutX="6.0" layoutY="147.0" onKeyPressed="#colorShow" prefHeight="32.0" prefWidth="200.0" promptText="Name File..." stylesheets="@css/textField.css" />
+      <TextField fx:id="sizeHeightField" layoutX="7.0" layoutY="279.0" onKeyPressed="#colorShow" prefHeight="32.0" prefWidth="85.0" promptText="Height" stylesheets="@css/textField.css" />
+      <Button fx:id="saveLocationButton1" accessibleRole="IMAGE_VIEW" layoutX="96.0" layoutY="279.0" minWidth="27.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #3c87ee; -fx-font-family: Roboto; -fx-font-size: 12px; -fx-text-fill: white;" text="↕" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Button>
+      <TextField fx:id="sizeWidthField" layoutX="141.0" layoutY="279.0" onKeyPressed="#colorShow" prefHeight="32.0" prefWidth="85.0" promptText="Width" stylesheets="@css/textField.css" />
+      <Button fx:id="saveLocationButton11" accessibleRole="IMAGE_VIEW" layoutX="230.0" layoutY="279.0" minWidth="27.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #3c87ee; -fx-font-family: Roboto; -fx-font-size: 12px; -fx-text-fill: white;" text="↔" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
